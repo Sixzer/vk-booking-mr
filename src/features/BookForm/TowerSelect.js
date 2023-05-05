@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Select from "react-select";
+import { useDispatch } from "react-redux";
+import { selectTower } from "./bookFormSlice";
 
 const options = [
     { value: "A", label: "Башня А" },
@@ -7,16 +9,18 @@ const options = [
 ];
 
 const TowerSelect = () => {
+    const dispatch = useDispatch();
     const [selectedOption, setSelectedOption] = useState(null);
 
     const handleChange = (selectedOption) => {
         setSelectedOption(selectedOption);
-        console.log(selectedOption);
+        dispatch(selectTower(selectedOption));
     };
 
     return (
         <Select
             required
+            placeholder={"Выбрать..."}
             value={selectedOption}
             onChange={handleChange}
             options={options}

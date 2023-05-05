@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addComment } from "./bookFormSlice";
 
 const CommentInput = () => {
     const [comment, setComment] = useState("");
+    const dispatch = useDispatch();
 
     const handleCommentChange = (event) => {
         setComment(event.target.value);
+        dispatch(addComment(event.target.value));
     };
 
     return (

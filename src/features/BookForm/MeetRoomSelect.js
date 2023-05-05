@@ -1,16 +1,22 @@
 import { useState } from "react";
 import Select from "react-select";
 
-const options = Array.from({ length: 10 }, (_, i) => ({
-    value: i + 1,
-    label: `Переговорная ${i + 1}`,
-}));
+const MEETROOMS = 10;
+const options = [];
+
+for (let i = 1; i <= MEETROOMS; i++) {
+    options.push({
+        value: i,
+        label: `Переговорная №${i}`,
+    });
+}
 
 const MeetRoomSelect = () => {
     const [selectedOption, setSelectedOption] = useState(null);
 
     const handleChange = (selectedOption) => {
         setSelectedOption(selectedOption);
+        console.log(selectedOption);
     };
 
     return (

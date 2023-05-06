@@ -2,28 +2,35 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const bookFormSlice = createSlice({
     name: "bookForm",
-    initialState: {},
+    initialState: {
+        tower: "tower",
+        floor: "floor",
+        meetingRoom: "mr",
+        date: new Date().toLocaleDateString(),
+        timeRange: [null, null],
+        comment: "comment",
+    },
     reducers: {
         selectTower: (state, action) => {
-            state.selectedTower = action.payload;
+            state.tower = action.payload;
         },
         selectFloor: (state, action) => {
-            state.selectedFloor = action.payload;
+            state.floor = action.payload;
         },
         selectMR: (state, action) => {
-            state.selectedMR = action.payload;
+            state.meetingRoom = action.payload;
         },
         selectDate: (state, action) => {
-            state.selectedDate = { value: action.payload };
+            state.date = { value: action.payload };
         },
         selectTime: (state, action) => {
-            state.selectedTime = {
+            state.timeRange = {
                 startValue: action.payload[0],
                 endValue: action.payload[1],
             };
         },
         addComment: (state, action) => {
-            state.addedComment = action.payload;
+            state.comment = action.payload;
         },
     },
 });

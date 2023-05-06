@@ -1,8 +1,9 @@
-import FloorSelect from "./FloorSelect";
-import TowerSelect from "./TowerSelect";
-import MeetRoomSelect from "./MeetRoomSelect";
-import DateTimeSelect from "./DateTimeSelect";
-import CommentInput from "./CommentInput";
+import TowerSelect from "../TowerSelect/TowerSelect";
+import FloorSelect from "../FloorSelect/FloorSelect";
+import MeetRoomSelect from "../MeetRoomSelect/MeetRoomSelect";
+import DateSelect from "../DateSelect/DateSelect";
+import TimeRangeSelect from "../TimeRangeSelect/TimeRangeSelect";
+import CommentInput from "../CommentInput/CommentInput";
 import "./bookForm.css";
 
 function BookForm() {
@@ -12,18 +13,15 @@ function BookForm() {
                 <TowerSelect />
                 <FloorSelect />
                 <MeetRoomSelect />
-                <DateTimeSelect />
+                <DateSelect />
+                <TimeRangeSelect />
             </div>
             <div className="bookForm-textArea">
                 <CommentInput />
             </div>
             <div className="bookForm-buttons">
-                <button type="submit" className="bookForm-buttons__submit">
-                    Отправить
-                </button>
-                <button type="reset" className="bookForm-buttons__reset">
-                    Очистить
-                </button>
+                <button className="bookForm-buttons__submit">Отправить</button>
+                <button className="bookForm-buttons__reset">Очистить</button>
             </div>
         </form>
     );

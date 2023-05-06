@@ -1,7 +1,6 @@
-import { useState } from "react";
 import Select from "react-select";
-import { useDispatch } from "react-redux";
-import { selectTower } from "./bookFormSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTower } from "../BookForm/bookFormSlice";
 
 const options = [
     { value: "A", label: "Башня А" },
@@ -10,10 +9,11 @@ const options = [
 
 const TowerSelect = () => {
     const dispatch = useDispatch();
-    const [selectedOption, setSelectedOption] = useState(null);
+
+    let selectedOption = useSelector((state) => state.bookForm.tower);
+    // console.log(selectedOption);
 
     const handleChange = (selectedOption) => {
-        setSelectedOption(selectedOption);
         dispatch(selectTower(selectedOption));
     };
 

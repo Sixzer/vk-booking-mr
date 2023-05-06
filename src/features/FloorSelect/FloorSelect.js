@@ -1,7 +1,6 @@
-import { useState } from "react";
 import Select from "react-select";
-import { useDispatch } from "react-redux";
-import { selectFloor } from "./bookFormSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFloor } from "../BookForm/bookFormSlice";
 
 const FLOORS = 27;
 const options = [];
@@ -14,11 +13,10 @@ for (let i = 3; i <= FLOORS; i++) {
 }
 
 const FloorSelect = () => {
+    let selectedOption = useSelector((state) => state.bookForm.floor);
     const dispatch = useDispatch();
-    const [selectedOption, setSelectedOption] = useState(null);
 
     const handleChange = (selectedOption) => {
-        setSelectedOption(selectedOption);
         dispatch(selectFloor(selectedOption));
     };
 

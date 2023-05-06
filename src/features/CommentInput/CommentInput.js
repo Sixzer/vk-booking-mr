@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addComment } from "./bookFormSlice";
+import { addComment } from "../BookForm/bookFormSlice";
 
 const CommentInput = () => {
     const [comment, setComment] = useState("");

@@ -7,4 +7,3 @@ const store = configureStore({
     },
 });
 export default store;
-store.subscribe(() => console.log(JSON.stringify(store.getState())));

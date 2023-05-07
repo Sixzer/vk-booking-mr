@@ -3,15 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectTower } from "../BookForm/bookFormSlice";
 
 const options = [
-    { value: "A", label: "Башня А" },
-    { value: "B", label: "Башня Б" },
+    { value: "А", label: "Башня А" },
+    { value: "Б", label: "Башня Б" },
 ];
 
 const TowerSelect = () => {
     const dispatch = useDispatch();
-
-    let selectedOption = useSelector((state) => state.bookForm.tower);
-    // console.log(selectedOption);
+    const selectedOption = useSelector((state) => state.bookForm.tower);
 
     const handleChange = (selectedOption) => {
         dispatch(selectTower(selectedOption));

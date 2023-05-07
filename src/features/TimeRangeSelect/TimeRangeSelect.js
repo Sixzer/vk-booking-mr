@@ -1,6 +1,5 @@
-import { useState } from "react";
 import TimeRangePicker from "@wojtekmaj/react-timerange-picker";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectTime } from "../BookForm/bookFormSlice";
 
 import "@wojtekmaj/react-timerange-picker/dist/TimeRangePicker.css";
@@ -8,10 +7,10 @@ import "react-clock/dist/Clock.css";
 
 function TimeRangeSelect() {
     const dispatch = useDispatch();
-    const [startTime, setStartTime] = useState([null, null]);
-
+    const selectedOption = useSelector(
+        (state) => state.bookForm.timeRange.value
+    );
     const handleChangeTime = (selectedOption) => {
-        setStartTime(selectedOption);
         dispatch(selectTime(selectedOption));
     };
 
@@ -19,7 +18,7 @@ function TimeRangeSelect() {
         <TimeRangePicker
             required={true}
             onChange={handleChangeTime}
-            value={startTime}
+            value={selectedOption}
             disableClock={true}
             className={"timerselect"}
         />

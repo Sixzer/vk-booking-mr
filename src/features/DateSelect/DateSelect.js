@@ -1,6 +1,5 @@
-import { useState } from "react";
 import DatePicker from "react-date-picker";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectDate } from "../BookForm/bookFormSlice";
 
 import "react-date-picker/dist/DatePicker.css";
@@ -10,20 +9,30 @@ import "react-clock/dist/Clock.css";
 
 const DateSelect = () => {
     const dispatch = useDispatch();
-    const [startDate, setStartDate] = useState(new Date());
+    const selectedOption = useSelector((state) => state.bookForm.date.value);
 
     const handleChangeDate = (selectedOption) => {
-        setStartDate(selectedOption);
-        dispatch(selectDate(selectedOption.toLocaleDateString()));
+        dispatch(
+            selectDate(
+                selectedOption
+                    ? selectedOption.toLocaleDateString("en-GB")
+                    : null
+            )
+        );
     };
 
     return (
         <DatePicker
             required={true}
-            value={startDate}
-            format={"d-MM-y"}
+            value={selectedOption}
+            format={"MM/dd/y"}
+            locale={"en-GB"}
+            dayPlaceholder={"дд"}
+            monthPlaceholder={"мм"}
+            yearPlaceholder={"гггг"}
             onChange={handleChangeDate}
             className={"timerselect"}
+            // clearIcon={null}
         />
     );
 };

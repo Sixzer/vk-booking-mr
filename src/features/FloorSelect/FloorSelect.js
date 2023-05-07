@@ -13,7 +13,7 @@ for (let i = 3; i <= FLOORS; i++) {
 }
 
 const FloorSelect = () => {
-    let selectedOption = useSelector((state) => state.bookForm.floor);
+    const selectedOption = useSelector((state) => state.bookForm.floor);
     const dispatch = useDispatch();
 
     const handleChange = (selectedOption) => {

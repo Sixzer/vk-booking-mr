@@ -4,11 +4,13 @@ import MeetRoomSelect from "../MeetRoomSelect/MeetRoomSelect";
 import DateSelect from "../DateSelect/DateSelect";
 import TimeRangeSelect from "../TimeRangeSelect/TimeRangeSelect";
 import CommentInput from "../CommentInput/CommentInput";
+import ResetButton from "../ResetButton/ResetButton";
+import SubmitButton from "../SubmitButton/SubmitButton";
 import "./bookForm.css";
 
 function BookForm() {
     return (
-        <form action="submit" className="bookForm">
+        <form className="bookForm">
             <div className="bookForm-dropdowns">
                 <TowerSelect />
                 <FloorSelect />
@@ -20,8 +22,8 @@ function BookForm() {
                 <CommentInput />
             </div>
             <div className="bookForm-buttons">
-                <button className="bookForm-buttons__submit">Отправить</button>
-                <button className="bookForm-buttons__reset">Очистить</button>
+                <SubmitButton />
+                <ResetButton />
             </div>
         </form>
     );

@@ -13,7 +13,7 @@ for (let i = 1; i <= MEETROOMS; i++) {
 }
 
 const MeetRoomSelect = () => {
-    let selectedOption = useSelector((state) => state.bookForm.meetingRoom);
+    const selectedOption = useSelector((state) => state.bookForm.meetingRoom);
     const dispatch = useDispatch();
 
     const handleChange = (selectedOption) => {

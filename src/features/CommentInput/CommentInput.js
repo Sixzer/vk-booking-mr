@@ -1,13 +1,11 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addComment } from "../BookForm/bookFormSlice";
 
 const CommentInput = () => {
-    const [comment, setComment] = useState("");
     const dispatch = useDispatch();
+    const comment = useSelector((state) => state.bookForm.comment.value);
 
     const handleCommentChange = (event) => {
-        setComment(event.target.value);
         dispatch(addComment(event.target.value));
     };
 

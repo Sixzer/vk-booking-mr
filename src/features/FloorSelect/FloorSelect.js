@@ -23,7 +23,7 @@ const FloorSelect = () => {
     return (
         <Select
             required
-            placeholder={"Выбрать..."}
+            placeholder={"Этаж..."}
             value={selectedOption}
             onChange={handleChange}
             options={options}

@@ -1,9 +1,8 @@
 .App {
-    background-color: #f2f3f5;
+    background-color: #141414;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    border-radius: 10px;
     padding: 20px;
 }

@@ -1,0 +1,13 @@
+.bookForm-buttons__submit {
+    width: 131px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 12px 24px;
+    margin: 0 12px;
+    background-color: #4bb34b;
+    transition: background-color 0.3s ease;
+}

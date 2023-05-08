@@ -23,7 +23,7 @@ const MeetRoomSelect = () => {
     return (
         <Select
             required
-            placeholder={"Выбрать..."}
+            placeholder={"Переговорная..."}
             value={selectedOption}
             onChange={handleChange}
             options={options}

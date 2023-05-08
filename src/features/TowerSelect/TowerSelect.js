@@ -18,7 +18,7 @@ const TowerSelect = () => {
     return (
         <Select
             required
-            placeholder={"Выбрать..."}
+            placeholder={"Башня..."}
             value={selectedOption}
             onChange={handleChange}
             options={options}

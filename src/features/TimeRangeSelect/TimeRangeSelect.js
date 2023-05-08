@@ -10,8 +10,11 @@ function TimeRangeSelect() {
     const selectedOption = useSelector(
         (state) => state.bookForm.timeRange.value
     );
+
     const handleChangeTime = (selectedOption) => {
-        dispatch(selectTime(selectedOption));
+        selectedOption[1] < selectedOption[0]
+            ? dispatch(selectTime([selectedOption[0], selectedOption[0]]))
+            : dispatch(selectTime(selectedOption));
     };
 
     return (
@@ -21,6 +24,7 @@ function TimeRangeSelect() {
             value={selectedOption}
             disableClock={true}
             className={"timerselect"}
+            clearIcon={null}
         />
     );
 }

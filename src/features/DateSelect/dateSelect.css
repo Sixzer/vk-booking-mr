@@ -1,0 +1,17 @@
+.react-date-picker {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+
+.react-date-picker__wrapper {
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.react-date-picker__inputGroup {
+    min-width: 0;
+    padding: 0 8px;
+}

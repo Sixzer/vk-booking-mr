@@ -6,7 +6,7 @@ const bookFormSlice = createSlice({
         tower: null,
         floor: null,
         meetingRoom: null,
-        date: { value: new Date().toLocaleDateString("en-GB") },
+        date: { value: "2023/05/08" },
         timeRange: { value: ["10:00", "11:00"] },
         comment: { value: "" },
     },

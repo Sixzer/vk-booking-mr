@@ -1,0 +1,17 @@
+.bookForm-buttons__reset {
+    width: 131px;
+    border: none;
+    border-radius: 30px;
+    color: #222222;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 12px 24px;
+    margin: 0 12px;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: #e4e4e4;
+    }
+}

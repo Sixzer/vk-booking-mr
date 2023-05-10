@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addComment } from "../BookForm/bookFormSlice";
+import "./commentInput.scss";
 
 const CommentInput = () => {
     const dispatch = useDispatch();
@@ -13,7 +14,8 @@ const CommentInput = () => {
         <textarea
             value={comment}
             onChange={handleCommentChange}
-            placeholder="Введите комментарий"
+            className={"bookForm-textArea__commentInput"}
+            placeholder="Введите комментарий..."
         />
     );
 };

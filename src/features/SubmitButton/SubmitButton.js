@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import "./submitButton.css";
+import "./submitButton.scss";
 
 function SubmitButton() {
     const store = useSelector((state) => state.bookForm);

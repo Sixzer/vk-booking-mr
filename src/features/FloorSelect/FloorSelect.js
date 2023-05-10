@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFloor } from "../BookForm/bookFormSlice";
+import "./floorSelect.scss";
 
 const FLOORS = 27;
 const options = [];
@@ -23,6 +24,7 @@ const FloorSelect = () => {
     return (
         <Select
             required
+            className={"bookForm-dropdowns__floorSelect"}
             placeholder={"Этаж..."}
             value={selectedOption}
             onChange={handleChange}

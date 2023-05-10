@@ -1,13 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+export const formatDate = (date) => {
+    let d = new Date(date),
+        month = "" + (d.getMonth() + 1),
+        day = "" + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = "0" + month;
+    if (day.length < 2) day = "0" + day;
+
+    return [year, month, day].join("/");
+};
+
 const bookFormSlice = createSlice({
     name: "bookForm",
     initialState: {
         tower: null,
         floor: null,
         meetingRoom: null,
-        date: { value: "2023/05/08" },
-        timeRange: { value: ["10:00", "11:00"] },
+        date: { value: formatDate(new Date()) },
+        timeRange: { value: ["9:00", "10:00"] },
         comment: { value: "" },
     },
     reducers: {

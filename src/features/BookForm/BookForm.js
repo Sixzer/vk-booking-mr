@@ -6,7 +6,7 @@ import TimeRangeSelect from "../TimeRangeSelect/TimeRangeSelect";
 import CommentInput from "../CommentInput/CommentInput";
 import ResetButton from "../ResetButton/ResetButton";
 import SubmitButton from "../SubmitButton/SubmitButton";
-import "./bookForm.css";
+import "./bookForm.scss";
 
 function BookForm() {
     return (

@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { useDispatch, useSelector } from "react-redux";
 import { selectMR } from "../BookForm/bookFormSlice";
+import "./meetRoomSelect.scss";
 
 const MEETROOMS = 10;
 const options = [];
@@ -23,6 +24,7 @@ const MeetRoomSelect = () => {
     return (
         <Select
             required
+            className={"bookForm-dropdowns__meetRoomSelect"}
             placeholder={"Переговорная..."}
             value={selectedOption}
             onChange={handleChange}

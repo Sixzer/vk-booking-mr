@@ -7,6 +7,7 @@ import {
     selectTime,
     addComment,
 } from "../BookForm/bookFormSlice";
+import "./resetButton.scss";
 
 function ResetButton() {
     const dispatch = useDispatch();

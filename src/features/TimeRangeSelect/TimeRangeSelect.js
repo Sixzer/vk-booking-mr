@@ -4,6 +4,7 @@ import { selectTime } from "../BookForm/bookFormSlice";
 
 import "@wojtekmaj/react-timerange-picker/dist/TimeRangePicker.css";
 import "react-clock/dist/Clock.css";
+import "./timeRangeSelect.scss";
 
 function TimeRangeSelect() {
     const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function TimeRangeSelect() {
             onChange={handleChangeTime}
             value={selectedOption}
             disableClock={true}
-            className={"timerselect"}
+            className={"bookForm-dropdowns__timeRangeSelect"}
             clearIcon={null}
         />
     );

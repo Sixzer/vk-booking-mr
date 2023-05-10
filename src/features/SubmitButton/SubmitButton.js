@@ -6,8 +6,6 @@ function SubmitButton() {
 
     const { tower, floor, meetingRoom, date, timeRange } = store;
 
-    // console.log(tower, floor, meetingRoom, date, timeRange);
-
     const handleSubmit = (e) => {
         if (
             ![tower, floor, meetingRoom, date.value, timeRange.value].some(
@@ -17,9 +15,6 @@ function SubmitButton() {
             e.preventDefault();
             console.log(JSON.stringify(store));
         }
-
-        // e.preventDefault();
-        // console.log(JSON.stringify(store));
     };
 
     return (
